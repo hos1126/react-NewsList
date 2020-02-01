@@ -31,6 +31,10 @@ const categories = [
     name: 'technology',
     text: '기술',
   },
+  {
+    name: 'haein',
+    text: '행뭉이',
+  },
 ];
 
 const CategoriesBlock = styled.div`
