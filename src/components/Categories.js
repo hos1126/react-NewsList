@@ -31,10 +31,6 @@ const categories = [
     name: 'technology',
     text: '기술',
   },
-  {
-    name: 'haein',
-    text: '행뭉이',
-  },
 ];
 
 const CategoriesBlock = styled.div`
@@ -52,7 +48,7 @@ const Category = styled(NavLink)`
   font-size: 1.125rem;
   cursor: pointer;
   white-space: pre;
-  text-decoreation: none;
+  text-decoration: none;
   color: inherit;
   padding-bottom: 0.25rem;
 
@@ -74,7 +70,7 @@ const Category = styled(NavLink)`
   }
 `;
 
-const Categories = () => {
+const Categories = ({ onSelect }) => {
   return (
     <CategoriesBlock>
       {categories.map(c => (

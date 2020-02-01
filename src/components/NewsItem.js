@@ -27,6 +27,7 @@ const NewItemBlock = styled.div`
     }
   }
   .title {
+    text-decoration: none;
     &:hover {
       color: #495057;
     }
