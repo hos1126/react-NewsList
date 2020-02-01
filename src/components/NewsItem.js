@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const NewItemBlock = styled.div`
+const NewsItemBlock = styled.div`
   display: flex;
   .thumbnail {
     margin-right: 1rem;
@@ -11,6 +11,9 @@ const NewItemBlock = styled.div`
       height: 100px;
       object-fit: cover;
     }
+  }
+  .title {
+    text-decoration: none;
   }
   .contents {
     h2 {
@@ -26,12 +29,6 @@ const NewItemBlock = styled.div`
       white-space: normal;
     }
   }
-  .title {
-    text-decoration: none;
-    &:hover {
-      color: #495057;
-    }
-  }
   & + & {
     margin-top: 3rem;
   }
@@ -40,7 +37,7 @@ const NewItemBlock = styled.div`
 const NewsItem = ({ article }) => {
   const { title, description, url, urlToImage } = article;
   return (
-    <NewItemBlock>
+    <NewsItemBlock>
       {urlToImage && (
         <div className="thumbnail">
           <a href={url} target="_blank" rel="noopener noreferrer">
@@ -48,6 +45,7 @@ const NewsItem = ({ article }) => {
           </a>
         </div>
       )}
+
       <div className="contents">
         <h2>
           <a
@@ -61,7 +59,7 @@ const NewsItem = ({ article }) => {
         </h2>
         <p>{description}</p>
       </div>
-    </NewItemBlock>
+    </NewsItemBlock>
   );
 };
 

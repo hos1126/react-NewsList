@@ -5,10 +5,10 @@ import NewsList from '../components/NewsList';
 const NewsPage = ({ match }) => {
   const category = match.params.category || 'all';
   return (
-    <>
+    <div>
       <Categories />
-      <NewsList category={category} />
-    </>
+      <NewsList category={category}></NewsList>
+    </div>
   );
 };
 
